@@ -2,6 +2,6 @@ language: python3
 cache: pip
 sudo: false
 install:
-  - pip install pytest flask
+  - pip install pytest flask SQLAlchemy flask-sqlalchemy
 script:
   - pytest tests/sample_test.py
