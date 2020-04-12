@@ -2,6 +2,6 @@ language: python3
 cache: pip
 sudo: false
 install:
-  - pip install pycodestyle
+  - pip install pytest
 script:
-  - pycodestyle .
+  - pytest tests/sample_test.py
