@@ -18,7 +18,7 @@ class LoginForm(FlaskForm):
 class RegistrationForm(FlaskForm):
 
     email = StringField('Email', validators=[DataRequired(), Email()])
-    username = StringField('UserName', validators=[DataRequired(), Email()])
+    username = StringField('UserName', validators=[DataRequired()])
     password = PasswordField('Password', validators=[DataRequired(), EqualTo(
         'pass_confirm', message='Password must match')])
     pass_confirm = PasswordField(
@@ -37,7 +37,7 @@ class RegistrationForm(FlaskForm):
 class UpdateForm(FlaskForm):
 
     email = StringField('Email', validators=[DataRequired(), Email()])
-    username = StringField('UserName', validators=[DataRequired(), Email()])
+    username = StringField('UserName', validators=[DataRequired()])
     picture = FileField('Update Profile Picture', validators=[
                         FileAllowed(['jpg', 'png'])])
     submit = SubmitField('Update')
