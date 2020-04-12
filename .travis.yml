@@ -2,6 +2,6 @@ language: python3
 cache: pip
 sudo: false
 install:
-  - pip install pytest
+  - pip install pytest flask
 script:
   - pytest tests/sample_test.py
